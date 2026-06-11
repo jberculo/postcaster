@@ -1,0 +1,77 @@
+<?php
+
+/**
+ * Abstract class for setting a basic lock to throttle some action.
+ *
+ * Class Justbee_PostCaster_ActionScheduler_Lock
+ *
+ * @license GPL-3.0-or-later
+ * Modified by justbee on 08-May-2026 using {@see https://github.com/BrianHenryIE/strauss}.
+ */
+abstract class Justbee_PostCaster_ActionScheduler_Lock {
+
+	/**
+	 * Instance.
+	 *
+	 * @var Justbee_PostCaster_ActionScheduler_Lock
+	 */
+	private static $locker = null;
+
+	/**
+	 * Duration of lock.
+	 *
+	 * @var int
+	 */
+	protected static $lock_duration = MINUTE_IN_SECONDS;
+
+	/**
+	 * Check if a lock is set for a given lock type.
+	 *
+	 * @param string $lock_type A string to identify different lock types.
+	 * @return bool
+	 */
+	public function is_locked( $lock_type ) {
+		return ( $this->get_expiration( $lock_type ) >= time() );
+	}
+
+	/**
+	 * Set a lock.
+	 *
+	 * To prevent race conditions, implementations should avoid setting the lock if the lock is already held.
+	 *
+	 * @param string $lock_type A string to identify different lock types.
+	 * @return bool
+	 */
+	abstract public function set( $lock_type );
+
+	/**
+	 * If a lock is set, return the timestamp it was set to expiry.
+	 *
+	 * @param string $lock_type A string to identify different lock types.
+	 * @return bool|int False if no lock is set, otherwise the timestamp for when the lock is set to expire.
+	 */
+	abstract public function get_expiration( $lock_type );
+
+	/**
+	 * Get the amount of time to set for a given lock. 60 seconds by default.
+	 *
+	 * @param string $lock_type A string to identify different lock types.
+	 * @return int
+	 */
+	protected function get_duration( $lock_type ) {
+		return apply_filters( 'action_scheduler_lock_duration', self::$lock_duration, $lock_type );
+	}
+
+	/**
+	 * Get instance.
+	 *
+	 * @return Justbee_PostCaster_ActionScheduler_Lock
+	 */
+	public static function instance() {
+		if ( empty( self::$locker ) ) {
+			$class        = apply_filters( 'action_scheduler_lock_class', 'Justbee_PostCaster_ActionScheduler_OptionLock' );
+			self::$locker = new $class();
+		}
+		return self::$locker;
+	}
+}

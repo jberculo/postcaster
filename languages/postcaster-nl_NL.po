@@ -1,0 +1,1447 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PostCaster\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-01 00:00+0200\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Domain: postcaster\n"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\postcaster.php:38
+#, php-format
+msgid "PostCaster requires PHP %1$s or newer. This site runs PHP %2$s."
+msgstr "PostCaster vereist PHP %1$s of nieuwer. Deze site draait op PHP %2$s."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\postcaster.php:42
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\postcaster.php:54
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\postcaster.php:66
+msgid "PostCaster activation failed"
+msgstr "Activeren van PostCaster is mislukt"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\postcaster.php:51
+msgid ""
+"PostCaster requires the PHP sodium extension to encrypt social network "
+"credentials. Ask your host to enable it before activating the plugin."
+msgstr ""
+"PostCaster vereist de PHP sodium-extensie om social-netwerkgegevens te "
+"versleutelen. Vraag je host om die in te schakelen voordat je de plugin "
+"activeert."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\postcaster.php:63
+msgid ""
+"PostCaster could not generate an encryption key. Check that the PHP sodium "
+"extension is fully functional and try again."
+msgstr ""
+"PostCaster kon geen encryptiesleutel genereren. Controleer of de PHP sodium-"
+"extensie volledig werkt en probeer het opnieuw."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:213
+msgid "No preview"
+msgstr "Geen preview"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:215
+#, php-format
+msgid "Customize for %s"
+msgstr "Aanpassen voor %s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:216
+msgid "Customize for all networks"
+msgstr "Aanpassen voor alle netwerken"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:217
+msgid "Post this article now to the selected target?"
+msgstr "Dit artikel nu naar het geselecteerde doel publiceren?"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:232
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:238
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:254
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:278
+msgid "PostCaster:"
+msgstr "PostCaster:"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:233
+msgid ""
+"PHP libsodium is not available, so social network credentials cannot be "
+"encrypted. Ask your host to enable the sodium extension."
+msgstr ""
+"PHP libsodium is niet beschikbaar, waardoor social-netwerkgegevens niet "
+"versleuteld kunnen worden. Vraag je host om de sodium-extensie in te "
+"schakelen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:239
+msgid ""
+"PostCaster has no encryption key yet. Re-activate the plugin from the "
+"Plugins screen, or define POSTCASTER_ENCRYPTION_KEY in wp-config.php."
+msgstr ""
+"PostCaster heeft nog geen encryptiesleutel. Activeer de plugin opnieuw via "
+"het pluginsoverzicht, of definieer POSTCASTER_ENCRYPTION_KEY in wp-"
+"config.php."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:255
+msgid ""
+"One or more encrypted PostCaster credentials could not be decrypted. Re-save "
+"the affected credentials in Global socials before publishing."
+msgstr ""
+"Een of meer versleutelde PostCaster-inloggegevens konden niet worden "
+"ontsleuteld. Sla de betrokken gegevens opnieuw op onder Globale socials "
+"voordat je publiceert."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\Plugin.php:280
+msgid ""
+"WP-Cron is disabled on this site. PostCaster relies on WP-Cron to retry "
+"failed publishes; without a real system cron hitting wp-cron.php, retries "
+"will not run."
+msgstr ""
+"WP-Cron is uitgeschakeld op deze site. PostCaster vertrouwt op WP-Cron om "
+"mislukte publicaties opnieuw te proberen; zonder een echte systeem-cron die "
+"wp-cron.php aanroept, worden herhalingen niet uitgevoerd."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\AbstractCliCommand.php:50
+msgid "Please provide a network key."
+msgstr "Geef een netwerksleutel op."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\AbstractCliCommand.php:57
+#, php-format
+msgid "Unknown network \"%1$s\". Available networks: %2$s"
+msgstr "Onbekend netwerk \"%1$s\". Beschikbare netwerken: %2$s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\AbstractCliCommand.php:72
+#, php-format
+msgid "Unknown post %d."
+msgstr "Onbekend bericht %d."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\AbstractCliCommand.php:87
+msgid "Unknown PostCaster CLI error."
+msgstr "Onbekende PostCaster-CLI-fout."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\AbstractCliCommand.php:93
+msgid "enabled"
+msgstr "ingeschakeld"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\AbstractCliCommand.php:94
+msgid "disabled"
+msgstr "uitgeschakeld"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\ConfigCommand.php:17
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\ConfigCommand.php:45
+#, php-format
+msgid "Global publishing: %s"
+msgstr "Globaal publiceren: %s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\ConfigCommand.php:66
+#, php-format
+msgid "%1$s is enabled but \"%2$s\" is empty."
+msgstr "%1$s is ingeschakeld maar \"%2$s\" is leeg."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\ConfigCommand.php:81
+#, php-format
+msgid "Global publishing %s."
+msgstr "Globaal publiceren %s."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\ConfigCommand.php:91
+#, php-format
+msgid "%1$s %2$s."
+msgstr "%1$s %2$s."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\LogsCommand.php:20
+#, php-format
+msgid "No post-specific logs found for post %d."
+msgstr "Geen berichtspecifieke logs gevonden voor bericht %d."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\LogsCommand.php:28
+#, php-format
+msgid "Post logs for %d:"
+msgstr "Berichtlogs voor %d:"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\LogsCommand.php:39
+msgid "No PostCaster post logs found."
+msgstr "Geen PostCaster-berichtlogs gevonden."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\LogsCommand.php:55
+msgid "System log:"
+msgstr "Systeemlog:"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\LogsCommand.php:70
+msgid "PostCaster logs cleared."
+msgstr "PostCaster-logs zijn gewist."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\ProfileCommand.php:22
+#, php-format
+msgid "Unknown user %d."
+msgstr "Onbekende gebruiker %d."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\ProfileCommand.php:31
+#, php-format
+msgid "Personal publishing for %1$s: %2$s"
+msgstr "Persoonlijk publiceren voor %1$s: %2$s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\ProfileCommand.php:47
+msgid "Please provide a network key for profile test."
+msgstr "Geef een netwerksleutel op voor de profieltest."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\ProfileCommand.php:66
+#, php-format
+msgid "Unknown profile action \"%s\"."
+msgstr "Onbekende profielactie \"%s\"."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\PublishCommand.php:30
+msgid ""
+"PostCaster published to one or more targets, but at least one target failed. "
+"Inspect the logs or article errors."
+msgstr ""
+"PostCaster heeft naar een of meer doelen gepubliceerd, maar minstens één "
+"doel is mislukt. Controleer de logs of artikelmeldingen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\PublishCommand.php:36
+#, php-format
+msgid "Post %d published through PostCaster."
+msgstr "Bericht %d is via PostCaster gepubliceerd."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\PublishCommand.php:56
+msgid "No PostCaster preview targets found for this post."
+msgstr "Geen PostCaster-previewdoelen gevonden voor dit bericht."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\TemplateCommand.php:21
+#, php-format
+msgid "Updated the post-specific template for post %d."
+msgstr "Het berichtspecifieke sjabloon voor bericht %d is bijgewerkt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\cli\TemplateCommand.php:30
+#, php-format
+msgid "Template source: %s"
+msgstr "Sjabloonbron: %s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:114
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:115
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:61
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-page.php:10
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\user-profile.php:12
+msgid "PostCaster"
+msgstr "PostCaster"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:125
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:126
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-global-socials-page.php:10
+msgid "Global socials"
+msgstr "Globale socials"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:138
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:149
+msgid "Settings"
+msgstr "Instellingen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:209
+#, php-format
+msgid ""
+"PostCaster is disabled in the general settings, so %s will not post until "
+"you enable PostCaster under General."
+msgstr ""
+"PostCaster staat uit in de algemene instellingen, dus %s zal niet posten "
+"totdat je PostCaster onder Algemeen inschakelt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:246
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:188
+msgid "You are not allowed to run a PostCaster test post."
+msgstr "Je mag geen PostCaster-testbericht uitvoeren."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:335
+msgid "You are not allowed to clear the PostCaster logs."
+msgstr "Je mag de PostCaster-logs niet wissen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:341
+msgid "PostCaster logging cleared."
+msgstr "PostCaster-logging is gewist."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:55
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:56
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\my-socials-page.php:10
+msgid "My socials"
+msgstr "Mijn socials"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:73
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:161
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:192
+msgid "Personal PostCaster accounts are disabled in the general settings."
+msgstr ""
+"Persoonlijke PostCaster-accounts zijn uitgeschakeld in de algemene "
+"instellingen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:81
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\AbstractNetworkPublisher.php:305
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-global-general-tab.php:22
+msgid "Use a custom template"
+msgstr "Gebruik een afwijkend sjabloon"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:133
+#, php-format
+msgid ""
+"Personal accounts are disabled, so %s will not post until you enable "
+"personal accounts under General."
+msgstr ""
+"Persoonlijke accounts staan uit, dus %s zal niet posten totdat je onder "
+"Algemeen persoonlijke accounts inschakelt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:143
+#, php-format
+msgid ""
+"Personal accounts are disabled, so nothing will be posted even though these "
+"networks are enabled: %s"
+msgstr ""
+"Persoonlijke accounts staan uit, dus er wordt niets geplaatst hoewel deze "
+"netwerken aan staan: %s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:157
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:168
+msgid "You are not allowed to edit your PostCaster social settings."
+msgstr "Je mag je PostCaster-socialinstellingen niet bewerken."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:178
+msgid "Your PostCaster social settings were saved."
+msgstr "Je PostCaster-socialinstellingen zijn opgeslagen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\ProfileController.php:200
+msgid "This personal PostCaster network is not available."
+msgstr "Dit persoonlijke PostCaster-netwerk is niet beschikbaar."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:221
+#, php-format
+msgid "PostCaster did not schedule this post: %s"
+msgstr "PostCaster heeft dit bericht niet ingepland: %s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:255
+msgid "Publish failed with a permanent error; not scheduling a retry."
+msgstr "Publicatie is mislukt met een permanente fout; er wordt geen nieuwe poging ingepland."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:264
+#, php-format
+msgid "Retry limit reached after %d attempts."
+msgstr "Herhalingslimiet bereikt na %d pogingen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:274
+#, php-format
+msgid "Scheduling retry %1$d of %2$d in %3$d seconds."
+msgstr "Nieuwe poging %1$d van %2$d wordt over %3$d seconden ingepland."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:287
+msgid "You are not allowed to publish this article with PostCaster."
+msgstr "Je mag dit artikel niet met PostCaster publiceren."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:294
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:393
+msgid "The selected article could not be found."
+msgstr "Het geselecteerde artikel kon niet worden gevonden."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:298
+msgid "PostCaster can only post directly from already published articles."
+msgstr "PostCaster kan alleen direct posten vanaf al gepubliceerde artikelen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:304
+msgid "No PostCaster targets are configured for this article."
+msgstr "Er zijn geen PostCaster-doelen geconfigureerd voor dit artikel."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:355
+#, php-format
+msgid "PostCaster did not publish this article: %s"
+msgstr "PostCaster heeft dit artikel niet gepubliceerd: %s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:367
+msgid ""
+"PostCaster posted to the available networks, but one or more targets failed. "
+"Check the log for details."
+msgstr ""
+"PostCaster heeft naar de beschikbare netwerken gepost, maar een of meer "
+"doelen zijn mislukt. Controleer de log voor details."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:375
+msgid "PostCaster posted this article to the currently connected networks."
+msgstr ""
+"PostCaster heeft dit artikel naar de momenteel gekoppelde netwerken gepost."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:386
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:398
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:403
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:469
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:482
+msgid "You are not allowed to preview this PostCaster template."
+msgstr "Je mag dit PostCaster-sjabloon niet previewen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:512
+#, php-format
+msgid "Initial publish scheduled for %1$s in %2$d seconds."
+msgstr "Eerste publicatie voor %1$s ingepland over %2$d seconden."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:518
+#, php-format
+msgid "PostCaster scheduled %1$s to run in %2$d seconds."
+msgstr "PostCaster heeft %s ingepland om over %d seconden te draaien."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:711
+msgid "PostCaster will retry failed targets automatically."
+msgstr "PostCaster probeert mislukte doelen automatisch opnieuw."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:714
+#, php-format
+msgid ""
+"Retry attempt %1$d is queued in the background scheduler. If background "
+"processing runs normally, the next retry should happen around %2$s."
+msgstr ""
+"Poging %1$d staat in de achtergrondplanner. Als de achtergrondverwerking "
+"normaal loopt, zou de volgende poging ongeveer rond %2$s moeten plaatsvinden."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:724
+msgid "PostCaster stopped retrying automatically for this article."
+msgstr ""
+"PostCaster is gestopt met automatisch opnieuw proberen voor dit artikel."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:725
+msgid ""
+"The retry limit was reached. Fix the reported problem below, then publish "
+"manually if you want to try again immediately."
+msgstr ""
+"De retrylimiet is bereikt. Los het hieronder gemelde probleem op en "
+"publiceer daarna handmatig als je het meteen opnieuw wilt proberen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:732
+msgid "PostCaster recorded one or more failed attempts for this article."
+msgstr ""
+"PostCaster heeft een of meer mislukte pogingen voor dit artikel vastgelegd."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\PublishController.php:733
+msgid ""
+"Check the target-specific errors below. If the underlying problem is already "
+"fixed, you can publish manually from this page."
+msgstr ""
+"Controleer hieronder de doelspecifieke fouten. Als het onderliggende "
+"probleem al is opgelost, kun je vanaf deze pagina handmatig publiceren."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\HttpService.php:24
+msgid "JSON request failed."
+msgstr "JSON-verzoek mislukt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\HttpService.php:52
+msgid "Multipart upload failed."
+msgstr "Multipart-upload is mislukt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\HttpService.php:82
+msgid "Invalid JSON response."
+msgstr "Ongeldige JSON-respons."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\MediaService.php:60
+msgid "Could not read the image."
+msgstr "Kon de afbeelding niet lezen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\MediaService.php:96
+msgid "Could not create a temporary image file."
+msgstr "Kon geen tijdelijk afbeeldingsbestand aanmaken."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\MediaService.php:110
+msgid "Could not read the temporary image file."
+msgstr "Kon het tijdelijke afbeeldingsbestand niet lezen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\MediaService.php:116
+msgid "The processed image still exceeds the upload limit."
+msgstr "De verwerkte afbeelding overschrijdt nog steeds de uploadlimiet."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PostTemplateContextBuilder.php:29
+msgid "PostCaster test post"
+msgstr "PostCaster-testbericht"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PostTemplateContextBuilder.php:30
+msgid "This is a template-based test post from PostCaster."
+msgstr "Dit is een op een sjabloon gebaseerd testbericht van PostCaster."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PreviewBuilder.php:68
+msgid "Test: "
+msgstr "Test: "
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PreviewBuilder.php:101
+msgid "General preview"
+msgstr "Algemene preview"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PreviewBuilder.php:246
+msgid "All accounts"
+msgstr "Alle accounts"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PreviewBuilder.php:380
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\TargetContextResolver.php:231
+msgid "Own article template"
+msgstr "Eigen berichtsjabloon"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PreviewBuilder.php:500
+#, php-format
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PreviewScaffoldBuilder.php:218
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:173
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:252
+msgid "Preview"
+msgstr "Preview"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PublisherService.php:96
+msgid "Global accounts"
+msgstr "Globale accounts"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PublisherService.php:113
+msgid "Personal accounts"
+msgstr "Persoonlijke accounts"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PublisherService.php:157
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-global-general-tab.php:9
+msgid "PostCaster is disabled in the general settings."
+msgstr "PostCaster staat uit in de algemene instellingen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PublisherService.php:167
+#, php-format
+msgid "Post type %s is not enabled for PostCaster."
+msgstr "Berichttype %s is niet ingeschakeld voor PostCaster."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PublisherService.php:174
+msgid "This article is set to not publish through PostCaster."
+msgstr ""
+"Dit artikel is ingesteld om niet via PostCaster te worden gepubliceerd."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PublisherService.php:179
+msgid "A filter blocked PostCaster for this post."
+msgstr "Een filter blokkeerde PostCaster voor dit bericht."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PublisherService.php:189
+msgid "No active PostCaster targets were found for this post."
+msgstr "Er zijn geen actieve PostCaster-doelen gevonden voor dit bericht."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\PublisherService.php:487
+#, php-format
+msgid ""
+"PostCaster could not publish because the rendered message is still %1$d "
+"characters long while %2$d is the maximum for %3$s. Shorten the template or "
+"the non-shrinkable parts such as the URL."
+msgstr ""
+"PostCaster kon niet publiceren omdat het gerenderde bericht nog steeds %1$d "
+"tekens lang is terwijl %2$d het maximum is voor %3$s. Verkort het sjabloon "
+"of de niet-inkortbare delen zoals de URL."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\TemplateDescriptionService.php:84
+msgid "Own personal network template"
+msgstr "Eigen persoonlijk netwerksjabloon"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\TemplateDescriptionService.php:94
+msgid "Own personal general template"
+msgstr "Eigen persoonlijk algemeen sjabloon"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\TemplateDescriptionService.php:104
+msgid "Own network template"
+msgstr "Eigen netwerksjabloon"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\TemplateDescriptionService.php:113
+msgid "Own general template"
+msgstr "Eigen algemeen sjabloon"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\TemplateDescriptionService.php:133
+msgid "Inherited from plugin default template"
+msgstr "Overgenomen van plugin-standaardsjabloon"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\TestPostService.php:34
+msgid "Unknown PostCaster network selected for test post."
+msgstr "Onbekend PostCaster-netwerk geselecteerd voor testbericht."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\TestPostService.php:54
+#, php-format
+msgid "PostCaster test post to %1$s failed: %2$s"
+msgstr "PostCaster-testbericht naar %1$s mislukt: %2$s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\TestPostService.php:66
+#, php-format
+msgid "PostCaster test post to %s succeeded."
+msgstr "PostCaster-testbericht naar %s is gelukt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\AbstractNetworkPublisher.php:236
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\AbstractNetworkPublisher.php:286
+msgid "Active"
+msgstr "Actief"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\AbstractNetworkPublisher.php:238
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\FieldTableRenderer.php:34
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:219
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:22
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-global-general-tab.php:21
+msgid "Enable"
+msgstr "Inschakelen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\AbstractNetworkPublisher.php:267
+msgid "No value stored yet."
+msgstr "Nog geen waarde opgeslagen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\AbstractNetworkPublisher.php:268
+msgid "A value is already stored. Enter a new one to replace it."
+msgstr "Er is al een waarde opgeslagen. Vul een nieuwe in om die te vervangen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\AbstractNetworkPublisher.php:295
+msgid "Card/embed"
+msgstr "Card/embed"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\AbstractNetworkPublisher.php:297
+msgid "Let PostCaster include the article card/embed when publishing"
+msgstr "Laat PostCaster de artikelkaart/embed meenemen bij het publiceren"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:73
+msgid "Bluesky may or may not auto-render this card from the URL. Enable \"Let PostCaster include the article card/embed when publishing\" to make PostCaster upload the card itself."
+msgstr "Bluesky toont deze kaart mogelijk wel of niet automatisch vanuit de URL. Zet \"Laat PostCaster de artikelkaart/embed meenemen bij het publiceren\" aan om PostCaster de kaart zelf te laten uploaden."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\AbstractNetworkPublisher.php:317
+msgid "Character limit"
+msgstr "Tekenlimiet"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\AbstractNetworkPublisher.php:321
+#, php-format
+msgid "Default: %d characters."
+msgstr "Standaard: %d tekens."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\AbstractNetworkPublisher.php:332
+msgid "Account reference"
+msgstr "Accountverwijzing"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:151
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:172
+msgid "Service URL"
+msgstr "Service-URL"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:152
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:175
+msgid "Identifier"
+msgstr "Identifier"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:153
+msgid "For example <login>.bsky.social."
+msgstr "Bijvoorbeeld <login>.bsky.social."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:156
+msgid "Used in previews and templates, for example @newsroom.bsky.social."
+msgstr "Gebruikt in previews en sjablonen, bijvoorbeeld @newsroom.bsky.social."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:160
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:183
+msgid "App password"
+msgstr "App-wachtwoord"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:161
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:184
+msgid "Leave blank to keep existing app password."
+msgstr "Laat leeg om het bestaande app-wachtwoord te behouden."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:192
+msgid "Bluesky setup"
+msgstr "Bluesky-instelling"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:194
+msgid "Log in to the Bluesky account that should publish posts."
+msgstr "Log in op het Bluesky-account dat berichten moet publiceren."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:195
+msgid ""
+"In Bluesky, open Settings and then App passwords (sometimes under Privacy "
+"and Security)."
+msgstr ""
+"Open in Bluesky Settings en daarna App passwords (soms onder Privacy and "
+"Security)."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:196
+msgid ""
+"Create a new app password for PostCaster, give it a recognizable name, and "
+"copy it immediately because Bluesky only shows it once."
+msgstr ""
+"Maak een nieuw app-wachtwoord voor PostCaster, geef het een herkenbare naam "
+"en kopieer het direct omdat Bluesky het maar een keer toont."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:197
+msgid "Fill in Service URL with usually https://bsky.social."
+msgstr "Vul bij Service-URL meestal https://bsky.social in."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:198
+msgid ""
+"Fill in Identifier with the account handle, for example <login>.bsky.social."
+msgstr ""
+"Vul bij Identifier de account-handle in, bijvoorbeeld <login>.bsky.social."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:199
+msgid ""
+"Paste the copied app password into the PostCaster field App password, save "
+"the settings, and send a test post."
+msgstr ""
+"Plak het gekopieerde app-wachtwoord in het PostCaster-veld App password, sla "
+"de instellingen op en verstuur een testbericht."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:201
+msgid ""
+"Note: Bluesky images must stay below roughly 1 MB after processing, "
+"otherwise image upload can fail."
+msgstr ""
+"Let op: Bluesky-afbeeldingen moeten na verwerking ongeveer onder 1 MB "
+"blijven, anders kan uploaden mislukken."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:236
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyPublisher.php:277
+msgid "Bluesky credentials are missing."
+msgstr "Bluesky-gegevens ontbreken."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyRecordBuilder.php:83
+msgid "Could not read Bluesky image."
+msgstr "Kon Bluesky-afbeelding niet lezen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyRecordBuilder.php:88
+msgid "Could not create a temporary file for Bluesky."
+msgstr "Kon geen tijdelijk bestand voor Bluesky aanmaken."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyRecordBuilder.php:93
+msgid "Could not read temporary Bluesky image."
+msgstr "Kon tijdelijke Bluesky-afbeelding niet lezen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyRecordBuilder.php:98
+msgid "Bluesky image still exceeds 1,000,000 bytes."
+msgstr "Bluesky-afbeelding is nog steeds groter dan 1.000.000 bytes."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\BlueskyRecordBuilder.php:119
+msgid "Bluesky blob upload failed."
+msgstr "Uploaden van Bluesky-blob mislukt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:99
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:124
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:102
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:122
+msgid "Access token"
+msgstr "Access token"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:100
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:125
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:103
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:123
+msgid "Leave blank to keep existing access token."
+msgstr "Laat leeg om het bestaande access token te behouden."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:102
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:127
+msgid "Author URN"
+msgstr "Auteur-URN"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:104
+msgid "For example urn:li:organization:123456 or urn:li:person:abcdef."
+msgstr "Bijvoorbeeld urn:li:organization:123456 of urn:li:person:abcdef."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:107
+msgid ""
+"Used in previews and templates, for example @newsroom or Newsroom "
+"Organization."
+msgstr ""
+"Gebruikt in previews en sjablonen, bijvoorbeeld @newsroom of Newsroom "
+"Organization."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:109
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:133
+msgid "LinkedIn version"
+msgstr "LinkedIn-versie"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:111
+msgid "Format YYYYMM."
+msgstr "Formaat JJJJMM."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:160
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:295
+msgid "LinkedIn credentials are missing."
+msgstr "LinkedIn-gegevens ontbreken."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:185
+msgid "LinkedIn upload URL or image URN is missing."
+msgstr "LinkedIn-upload-URL of afbeeldings-URN ontbreekt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:193
+msgid "Could not read LinkedIn image."
+msgstr "Kon LinkedIn-afbeelding niet lezen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:226
+msgid "LinkedIn image status check failed."
+msgstr "Controleren van de LinkedIn-afbeeldingsstatus is mislukt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\LinkedInPublisher.php:242
+msgid "LinkedIn image still processing; will retry via cron."
+msgstr "LinkedIn-afbeelding wordt nog verwerkt; opnieuw proberen via cron."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:97
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:117
+msgid "Base URL"
+msgstr "Basis-URL"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:98
+msgid "For example https://mastodon.social."
+msgstr "Bijvoorbeeld https://mastodon.social."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:106
+msgid "Used in previews and templates, for example @newsroom@mastodon.social."
+msgstr ""
+"Gebruikt in previews en sjablonen, bijvoorbeeld @newsroom@mastodon.social."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:108
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:128
+msgid "Visibility"
+msgstr "Zichtbaarheid"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:135
+msgid "Mastodon setup"
+msgstr "Mastodon-instelling"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:137
+msgid "Log in to the Mastodon account that should publish posts."
+msgstr "Log in op het Mastodon-account dat berichten moet publiceren."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:138
+msgid ""
+"In Mastodon, open Preferences or Settings, go to Development, and create a "
+"new application or access token for PostCaster."
+msgstr ""
+"Open in Mastodon Preferences of Settings, ga naar Development en maak een "
+"nieuwe applicatie of access token voor PostCaster."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:139
+msgid ""
+"When creating the token, allow posting statuses and uploading media. On some "
+"servers this is write:statuses and write:media; on others a broader write "
+"scope is used."
+msgstr ""
+"Sta bij het maken van het token het plaatsen van statussen en uploaden van "
+"media toe. Op sommige servers is dit write:statuses en write:media; op "
+"andere wordt een bredere write-scope gebruikt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:140
+msgid ""
+"Fill in Base URL with the full server address only, for example https://"
+"mastodon.social, without your profile path."
+msgstr ""
+"Vul bij Basis-URL alleen het volledige serveradres in, bijvoorbeeld https://"
+"mastodon.social, zonder je profielpad."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:141
+msgid ""
+"Paste the copied token into the PostCaster field Access token and choose the "
+"desired Visibility."
+msgstr ""
+"Plak het gekopieerde token in het PostCaster-veld Access token en kies de "
+"gewenste zichtbaarheid."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:142
+msgid "Save the settings and send a test post."
+msgstr "Sla de instellingen op en verstuur een testbericht."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:144
+msgid ""
+"The token must be allowed to publish posts and upload media if you want "
+"featured images included."
+msgstr ""
+"Het token moet berichten mogen publiceren en media mogen uploaden als je "
+"uitgelichte afbeeldingen wilt meenemen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:151
+msgid "Public"
+msgstr "Publiek"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:152
+msgid "Unlisted"
+msgstr "Niet vermeld"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:153
+msgid "Followers-only"
+msgstr "Alleen volgers"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:177
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:284
+msgid "Mastodon credentials are missing."
+msgstr "Mastodon-gegevens ontbreken."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:187
+msgid "Could not read Mastodon image."
+msgstr "Kon Mastodon-afbeelding niet lezen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:222
+msgid "Mastodon media upload failed."
+msgstr "Uploaden van Mastodon-media is mislukt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:236
+msgid "Mastodon media processing failed."
+msgstr "Verwerken van Mastodon-media is mislukt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:247
+msgid "Mastodon media still processing; will retry via cron."
+msgstr "Mastodon-media wordt nog verwerkt; opnieuw proberen via cron."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:269
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\services\networks\MastodonPublisher.php:298
+msgid "Mastodon status post failed."
+msgstr "Plaatsen van Mastodon-status is mislukt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\FieldTableRenderer.php:42
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:56
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-global-general-tab.php:29
+msgid ""
+"Make this empty and save or update the preview to restore the original "
+"template."
+msgstr ""
+"Maak dit leeg en sla op of werk de preview bij om het oorspronkelijke "
+"sjabloon te herstellen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\NoticeRenderer.php:42
+#, php-format
+msgid "Send test post to %s"
+msgstr "Verstuur testbericht naar %s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\NoticeRenderer.php:45
+msgid ""
+"Uses the latest published article. Save settings first to apply changes."
+msgstr ""
+"Gebruikt het laatst gepubliceerde artikel. Sla eerst de instellingen op om "
+"wijzigingen toe te passen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:19
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:232
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-global-general-tab.php:17
+msgid "Template"
+msgstr "Sjabloon"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:24
+msgid "Override default template"
+msgstr "Standaardsjabloon overschrijven"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:29
+msgid "Template preview"
+msgstr "Sjabloon preview"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:48
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:49
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:161
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:171
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:229
+msgid "Customize template"
+msgstr "Sjabloon aanpassen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:90
+msgid ""
+"Preview updated. Save the settings to use these changes for test posts and "
+"publishing."
+msgstr ""
+"Preview bijgewerkt. Sla de instellingen op om deze wijzigingen te gebruiken "
+"voor testberichten en publiceren."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:107
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:123
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:236
+msgid "Update preview"
+msgstr "Preview bijwerken"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:115
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:132
+msgid "Updating preview..."
+msgstr "Preview wordt bijgewerkt..."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:116
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:133
+msgid "Could not update the preview."
+msgstr "Kon de preview niet bijwerken."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:195
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:221
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:237
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:196
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:238
+msgid "Save changes"
+msgstr "Wijzigingen opslaan"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:235
+#, php-format
+msgid "Current template source: %s"
+msgstr "Huidige sjabloonbron: %s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:338
+msgid "Supported template placeholders"
+msgstr "Ondersteunde template-placeholders"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:340
+msgid "the title of your blog post"
+msgstr "de titel van je blogbericht"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:341
+msgid "the title of your site"
+msgstr "de titel van je site"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:342
+msgid "a short excerpt of the post content"
+msgstr "een korte samenvatting van de berichtinhoud"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:343
+msgid "alias of {post} for backward compatibility"
+msgstr "alias van {post} voor achterwaartse compatibiliteit"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:344
+msgid "the first selected category for the post"
+msgstr "de eerst geselecteerde categorie van het bericht"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:345
+msgid "the category description"
+msgstr "de categoriebeschrijving"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:346
+msgid "the post date"
+msgstr "de publicatiedatum van het bericht"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:347
+msgid "the post modified date"
+msgstr "de wijzigingsdatum van het bericht"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:348
+msgid "the post URL"
+msgstr "de URL van het bericht"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:349
+msgid "the post author display name"
+msgstr "de weergavenaam van de auteur van het bericht"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:350
+msgid ""
+"the configured site account reference for the current network, or {site} "
+"when unavailable"
+msgstr ""
+"de ingestelde sitereferentie voor het huidige netwerk, of {site} als die "
+"ontbreekt"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:351
+msgid "the article author network reference, or {author} when unavailable"
+msgstr ""
+"de netwerkverwijzing van de artikelauteur, of {author} als die ontbreekt"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\views\TemplateEditorRenderer.php:352
+msgid "the post tags converted to hashtags"
+msgstr "de tags van het bericht omgezet naar hashtags"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-global-socials-page.php:11
+msgid "Configure the site-wide social accounts PostCaster can publish to."
+msgstr ""
+"Configureer de sitebrede social-accounts waar PostCaster naartoe kan "
+"publiceren."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-global-socials-page.php:27
+msgid "PostCaster global network tabs"
+msgstr "PostCaster-tabbladen voor globale netwerken"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-global-socials-page.php:28
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-page.php:38
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-settings-page.php:41
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\user-profile.php:26
+msgid "General"
+msgstr "Algemeen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-page.php:11
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-settings-page.php:11
+msgid ""
+"PostCaster publishes new posts to configured social networks when a post "
+"moves from unpublished to publish."
+msgstr ""
+"PostCaster publiceert nieuwe berichten naar ingestelde sociale netwerken "
+"wanneer een bericht van ongepubliceerd naar gepubliceerd gaat."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-page.php:43
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:97
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:26
+msgid "Extensive logging"
+msgstr "Uitgebreide logging"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-settings-page.php:10
+msgid "PostCaster Settings"
+msgstr "PostCaster-instellingen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-settings-page.php:40
+msgid "PostCaster settings tabs"
+msgstr "PostCaster-instellingstabbladen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-settings-page.php:42
+msgid "Logging"
+msgstr "Logging"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:30
+msgid ""
+"This article has already been published. On published articles, only admins "
+"and editors can repost it from this page."
+msgstr ""
+"Dit artikel is al gepubliceerd. Op gepubliceerde artikelen kunnen alleen "
+"admins en editors het vanaf deze pagina opnieuw posten."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:36
+msgid "PostCaster could not publish to one or more targets:"
+msgstr "PostCaster kon niet naar een of meer doelen publiceren:"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:43
+msgid ""
+"Typical causes are invalid credentials, media upload problems, or a message "
+"that is still too long after safe shortening."
+msgstr ""
+"Typische oorzaken zijn ongeldige inloggegevens, problemen bij het uploaden "
+"van media of een bericht dat zelfs na veilig inkorten nog te lang is."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:57
+msgid ""
+"Warning: this article has already been posted to at least one network. "
+"Posting again can create duplicates."
+msgstr ""
+"Waarschuwing: dit artikel is al naar minstens één netwerk gepost. Nogmaals "
+"posten kan duplicaten veroorzaken."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:58
+msgid "This article has already been posted:"
+msgstr "Dit artikel is al gepost:"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:72
+msgid "Posting to"
+msgstr "Plaatsen naar"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:111
+msgid "Show preview for"
+msgstr "Toon preview voor"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:113
+msgid "All networks (combined)"
+msgstr "Alle netwerken (gecombineerd)"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:135
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:183
+msgid "Customize"
+msgstr "Aanpassen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:145
+#, php-format
+msgid "Post to all networks under %s."
+msgstr "Plaats op alle netwerken onder %s."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:148
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:197
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:222
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:17
+msgid "Post"
+msgstr "Plaatsen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:193
+#, php-format
+msgid "Post only to %1$s (%2$s)."
+msgstr "Plaats alleen op %1$s (%2$s)."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:208
+msgid "Skip automatic publishing for this article"
+msgstr "Automatisch publiceren voor dit artikel overslaan"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:212
+msgid ""
+"When enabled, PostCaster will not automatically publish this article. Manual "
+"posts via the buttons above still work."
+msgstr ""
+"Als dit is ingeschakeld, publiceert PostCaster dit artikel niet automatisch. "
+"Handmatig plaatsen via de knoppen hierboven blijft wel werken."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\post-compose-box.php:218
+msgid "Post now?"
+msgstr "Nu plaatsen?"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\user-profile.php:25
+msgid "PostCaster profile tabs"
+msgstr "PostCaster-profieltabbladen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\user-profile.php:41
+msgid "Save profile"
+msgstr "Profiel opslaan"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:9
+msgid "Failed publishes"
+msgstr "Mislukte publicaties"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:11
+msgid ""
+"Posts that currently have one or more PostCaster errors. Open the post to "
+"inspect details and use the metabox to retry or fix the configuration."
+msgstr ""
+"Berichten die momenteel een of meer PostCaster-fouten hebben. Open het "
+"bericht om details te bekijken en gebruik de metabox om opnieuw te proberen "
+"of de configuratie te herstellen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:18
+msgid "Status"
+msgstr "Status"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:19
+msgid "Errors"
+msgstr "Fouten"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:20
+msgid "Retries"
+msgstr "Nieuwe pogingen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:68
+#, php-format
+msgid "Attempt %d"
+msgstr "Poging %d"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:79
+#, php-format
+msgid "Next retry in %s"
+msgstr "Volgende nieuwe poging over %s"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:99
+msgid "Central logging"
+msgstr "Centrale logging"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:100
+msgid "Newest messages are shown first."
+msgstr "Nieuwste meldingen staan bovenaan."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:105
+msgid "Clear logs"
+msgstr "Logs wissen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:110
+msgid "No PostCaster log messages yet."
+msgstr "Nog geen PostCaster-logmeldingen."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-debug-tab.php:116
+msgid "Connection tests"
+msgstr "Verbindingstests"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:10
+msgid "How it works"
+msgstr "Hoe het werkt"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:11
+msgid ""
+"PostCaster only publishes automatically when a post moves from unpublished "
+"to publish. Updating an already published post does not create a new social "
+"post automatically."
+msgstr ""
+"PostCaster publiceert alleen automatisch wanneer een bericht van "
+"ongepubliceerd naar gepubliceerd gaat. Een al gepubliceerd bericht bijwerken "
+"maakt niet automatisch een nieuw social bericht aan."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:12
+msgid ""
+"Global social defaults and network credentials are configured under Global "
+"socials. Authors can add personal accounts under My socials when enabled."
+msgstr ""
+"Globale social-defaults en netwerkgegevens configureer je onder Globale "
+"socials. Auteurs kunnen persoonlijke accounts toevoegen onder Mijn socials "
+"als dat is ingeschakeld."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:13
+msgid ""
+"Recommended test: enable extensive logging, publish a new test post with a "
+"featured image, and check the central PostCaster logging tab if nothing "
+"appears on the social network."
+msgstr ""
+"Aanbevolen test: schakel uitgebreide logging in, publiceer een nieuw "
+"testbericht met uitgelichte afbeelding en controleer het centrale PostCaster-"
+"loggingtabje als er niets op het sociale netwerk verschijnt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:19
+msgid "Plugin enabled"
+msgstr "Plugin ingeschakeld"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:29
+msgid ""
+"Store log messages centrally in post meta and show them in the logging tab"
+msgstr ""
+"Sla logmeldingen centraal op in postmeta en toon ze in het loggingtabje"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:33
+msgid "Personal networks"
+msgstr "Persoonlijke netwerken"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:37
+msgid "Allow authors to configure and use personal social accounts"
+msgstr ""
+"Sta auteurs toe om persoonlijke sociale accounts in te stellen en te "
+"gebruiken"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:38
+msgid ""
+"When this is off, PostCaster hides the profile settings and only publishes "
+"through the global accounts configured here."
+msgstr ""
+"Als dit uit staat, verbergt PostCaster de profielinstellingen en publiceert "
+"het alleen via de globale accounts die hier zijn ingesteld."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:42
+msgid "Available personal networks"
+msgstr "Beschikbare persoonlijke netwerken"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:57
+#, php-format
+msgid "Allow authors to use %s"
+msgstr "Sta auteurs toe om %s te gebruiken"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:65
+msgid ""
+"Unchecked networks are hidden from My socials and any saved profile "
+"credentials for them are ignored until you enable them again."
+msgstr ""
+"Uitgevinkte netwerken worden verborgen in Mijn socials en opgeslagen "
+"profielgegevens daarvoor worden genegeerd totdat je ze weer inschakelt."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:89
+msgid "Post types"
+msgstr "Berichttypen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-general-tab.php:104
+msgid "Choose which post types PostCaster may publish automatically."
+msgstr "Kies welke berichttypen PostCaster automatisch mag publiceren."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\admin-settings-page.php:40
+msgid "Queue"
+msgstr "Wachtrij"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-queue-tab.php:8
+msgid "Background queue"
+msgstr "Achtergrondwachtrij"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-queue-tab.php:9
+msgid ""
+"Queued jobs waiting to run, running now, or recently completed for "
+"PostCaster."
+msgstr ""
+"Geplande taken die nog moeten starten, nu draaien of onlangs zijn afgerond "
+"voor PostCaster."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-queue-tab.php:17
+msgid "Article"
+msgstr "Artikel"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-queue-tab.php:18
+msgid "Network"
+msgstr "Netwerk"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-queue-tab.php:19
+msgid "Target"
+msgstr "Doel"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-queue-tab.php:20
+msgid "Trigger"
+msgstr "Trigger"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-queue-tab.php:22
+msgid "Scheduled"
+msgstr "Gepland"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:402
+msgid "Pending"
+msgstr "In afwachting"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:403
+msgid "Running"
+msgstr "Bezig"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:404
+msgid "Failed"
+msgstr "Mislukt"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:405
+msgid "Completed"
+msgstr "Voltooid"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:408
+msgid "Automatic publish"
+msgstr "Automatisch publiceren"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:409
+msgid "Manual publish"
+msgstr "Handmatig publiceren"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-queue-tab.php:12
+msgid "No queued publish jobs right now."
+msgstr "Er staan nu geen publicatietaken in de wachtrij."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-queue-tab.php:59
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\admin-global-general-tab.php:12
+msgid ""
+"These defaults apply to the global social accounts on the network tabs below "
+"unless a network-specific template overrides them."
+msgstr ""
+"Deze defaults gelden voor de globale social-accounts in de netwerktabbladen "
+"hieronder, tenzij een netwerkspecifiek sjabloon ze overschrijft."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\profile-general-tab.php:13
+msgid "Use personal accounts"
+msgstr "Gebruik persoonlijke accounts"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\profile-general-tab.php:15
+msgid "Use my own social accounts for my publications"
+msgstr "Gebruik mijn eigen social accounts voor mijn publicaties"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\profile-general-tab.php:16
+msgid ""
+"Only for posts where you are the author or a linked co-author. Global "
+"accounts remain active in parallel when they are also configured."
+msgstr ""
+"Alleen voor berichten waarvan jij de auteur of een gekoppelde coauteur bent. "
+"Globale accounts blijven daarnaast actief als die ook zijn ingesteld."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\profile-general-tab.php:20
+msgid "Other articles"
+msgstr "Overige artikelen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\profile-general-tab.php:22
+msgid ""
+"Also publish other articles that appear on the site through my personal "
+"accounts"
+msgstr ""
+"Publiceer ook andere artikelen die op de site verschijnen via mijn "
+"persoonlijke accounts"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\partials\profile-general-tab.php:23
+msgid ""
+"Off by default. When enabled, posts by other authors use the general "
+"PostCaster template on your personal networks. Your own articles still use "
+"your personal profile flow and template settings."
+msgstr ""
+"Staat standaard uit. Als dit aan staat, gebruiken berichten van andere "
+"auteurs op je persoonlijke netwerken het algemene PostCaster-sjabloon. Je "
+"eigen artikelen blijven je persoonlijke profiel-flow en sjablooninstellingen "
+"gebruiken."
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:572
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:622
+msgid "Published"
+msgstr "Gepubliceerd"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\includes\controllers\AdminController.php:577
+msgid "Retry"
+msgstr "Opnieuw proberen"
+
+#: C:\www\prive\justbee\wp-content\plugins\postcaster\views\helpers.php:193
+#, php-format
+msgid "Showing %1$d-%2$d of %3$d"
+msgstr "Toont %1$d-%2$d van %3$d"
+
+#~ msgid "Test post"
+#~ msgstr "Testbericht"
+
+#~ msgid "Custom template"
+#~ msgstr "Afwijkend sjabloon"
+
+#~ msgid "Current effective template"
+#~ msgstr "Huidig effectief sjabloon"
+
+#~ msgid "Do not publish this article to social networks"
+#~ msgstr "Publiceer dit artikel niet op sociale netwerken"
+
+#~ msgid ""
+#~ "When enabled, PostCaster will skip both automatic and manual publishing "
+#~ "for this article until you turn it off again."
+#~ msgstr ""
+#~ "Wanneer dit aan staat, slaat PostCaster voor dit artikel zowel "
+#~ "automatische als handmatige publicatie over totdat je het weer uitzet."

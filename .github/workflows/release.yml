@@ -1,0 +1,110 @@
+name: Release Plugin
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      PLUGIN_SLUG: postcaster
+      PLUGIN_DIR: .
+      WPORG_USERNAME: ${{ secrets.WPORG_USERNAME }}
+      WPORG_PASSWORD: ${{ secrets.WPORG_PASSWORD }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify tag commit is on master
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin master --depth=1
+
+          if ! git branch -r --contains "$GITHUB_SHA" | grep -Eq 'origin/master$'; then
+            echo "Tag ${GITHUB_REF_NAME} does not point to a commit on master."
+            exit 1
+          fi
+
+      - name: Validate release versions
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          tag_version="${GITHUB_REF_NAME#v}"
+          plugin_file="${PLUGIN_DIR}/${PLUGIN_SLUG}.php"
+          readme_file="${PLUGIN_DIR}/readme.txt"
+
+          plugin_version="$(awk -F': ' '/^[[:space:]]*\* Version:/ { print $2; exit }' "$plugin_file")"
+          readme_version="$(awk -F': ' '/^Stable tag:/ { print $2; exit }' "$readme_file")"
+
+          if [[ -z "$plugin_version" ]]; then
+            echo "Could not read Version header from ${plugin_file}."
+            exit 1
+          fi
+
+          if [[ -z "$readme_version" ]]; then
+            echo "Could not read Stable tag from ${readme_file}."
+            exit 1
+          fi
+
+          if [[ "$tag_version" != "$plugin_version" ]]; then
+            echo "Tag version (${tag_version}) does not match plugin version (${plugin_version})."
+            exit 1
+          fi
+
+          if [[ "$tag_version" != "$readme_version" ]]; then
+            echo "Tag version (${tag_version}) does not match readme stable tag (${readme_version})."
+            exit 1
+          fi
+
+      - name: Build plugin zip
+        shell: bash
+        run: |
+          php bin/build-release.php
+
+      - name: Install SVN tooling
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y subversion rsync unzip
+
+      - name: Validate WordPress.org credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ -z "${WPORG_USERNAME}" ]]; then
+            echo "Missing GitHub secret: WPORG_USERNAME"
+            exit 1
+          fi
+
+          if [[ -z "${WPORG_PASSWORD}" ]]; then
+            echo "Missing GitHub secret: WPORG_PASSWORD"
+            exit 1
+          fi
+
+      - name: Deploy to WordPress.org SVN
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          version="${GITHUB_REF_NAME#v}"
+          zip_path="./dist/${PLUGIN_SLUG}-${GITHUB_REF_NAME}.zip"
+
+          chmod +x bin/deploy-wporg.sh
+          ./bin/deploy-wporg.sh "${PLUGIN_SLUG}" "${version}" "${zip_path}" "${WPORG_USERNAME}" "${WPORG_PASSWORD}"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: ./dist/${{ env.PLUGIN_SLUG }}-${{ github.ref_name }}.zip

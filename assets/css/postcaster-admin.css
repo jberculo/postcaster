@@ -1,0 +1,271 @@
+/* PostCaster admin styles. Loaded on PostCaster settings, profile, and post-edit screens. */
+
+/* --- Preview card --- */
+.postcaster-preview-item {
+    max-width: 420px;
+    margin: 0 0 10px;
+    padding: 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 14px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    box-sizing: border-box;
+}
+
+.postcaster-preview-item__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 10px;
+}
+
+.postcaster-preview-item__avatar {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    background: #eef2f7;
+    color: #334155;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.postcaster-preview-item__avatar--small {
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+}
+
+.postcaster-preview-item__identity {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.postcaster-preview-item__name {
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #111827;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.postcaster-preview-item__name--small {
+    font-size: 13px;
+}
+
+.postcaster-preview-item__meta {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 1.35;
+    color: #667085;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.postcaster-preview-item__meta--small {
+    font-size: 11px;
+}
+
+.postcaster-preview-item__text {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #1f2933;
+}
+
+.postcaster-preview-item__text--small {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.postcaster-preview-item__card {
+    margin-top: 10px;
+    border: 1px solid #a5b2c5;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.postcaster-preview-item__card--compact {
+    border-color: #cbd5e1;
+    border-radius: 10px;
+}
+
+.postcaster-preview-item__card-image {
+    aspect-ratio: 1.91 / 1;
+    overflow: hidden;
+    border-bottom: 1px solid #dce2ea;
+}
+
+.postcaster-preview-item__card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.postcaster-preview-item__card-body {
+    padding: 10px 12px 8px;
+}
+
+.postcaster-preview-item__card-title {
+    font-size: 15px;
+    line-height: 1.35;
+    font-weight: 600;
+    color: #111827;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.postcaster-preview-item__card-title--compact {
+    font-size: 13px;
+    padding: 0;
+}
+
+.postcaster-preview-item__card-description {
+    margin-top: 4px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #1f2933;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.postcaster-preview-item__card-description--compact {
+    font-size: 12px;
+    color: #475569;
+    margin-top: 2px;
+}
+
+.postcaster-preview-item__card-domain {
+    padding: 6px 12px 8px;
+    border-top: 1px solid #dce2ea;
+    font-size: 11px;
+    line-height: 1.35;
+    color: #334155;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.postcaster-preview-item__card-domain--compact {
+    padding: 0;
+    border-top: 0;
+    margin-top: 4px;
+    color: #94a3b8;
+}
+
+.postcaster-preview-item__image-wrap {
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.postcaster-preview-item__image-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* --- Dialog/modal --- */
+.postcaster-modal {
+    max-width: 560px;
+    width: 92vw;
+    border: 1px solid #c3c4c7;
+    border-radius: 8px;
+    padding: 32px 36px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.postcaster-modal--wide {
+    max-width: 640px;
+}
+
+.postcaster-modal--compact {
+    max-width: 420px;
+    padding: 24px 28px;
+}
+
+.postcaster-modal__form {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.postcaster-modal__form--compact {
+    gap: 14px;
+}
+
+.postcaster-modal__title {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+.postcaster-modal__title--small {
+    font-size: 16px;
+}
+
+.postcaster-modal__section-label {
+    display: block;
+    margin: 0 0 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #475569;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+}
+
+.postcaster-modal__textarea {
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.postcaster-modal__actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin: 0;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 16px;
+}
+
+.postcaster-modal__actions p,
+.postcaster-modal__actions {
+    flex-wrap: wrap;
+}
+
+/* --- Shared admin tabs/log panels --- */
+.postcaster-tab-panel,
+.postcaster-profile-tab-panel {
+    display: none;
+    margin-top: 20px;
+}
+
+.postcaster-tab-panel.is-active,
+.postcaster-profile-tab-panel.is-active {
+    display: block;
+}
+
+.postcaster-debug-log {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.postcaster-debug-log code {
+    display: block;
+    white-space: pre-wrap;
+}

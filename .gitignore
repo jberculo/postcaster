@@ -1,0 +1,7 @@
+/vendor/
+/tests/wordpress/
+/tests/phpunit/wp-tests-config.php
+.phpunit.result.cache
+/.idea/
+/dist/
+/postcaster-v*.zip

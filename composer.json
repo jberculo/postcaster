@@ -1,0 +1,75 @@
+{
+    "name": "justbee/postcaster",
+    "description": "PostCaster publishes WordPress posts to Bluesky and Mastodon.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=8.1",
+        "woocommerce/action-scheduler": "^3.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "wp-phpunit/wp-phpunit": "^6.9",
+        "yoast/phpunit-polyfills": "^2.0",
+        "roots/wordpress-no-content": "^7.0",
+        "brianhenryie/strauss": "0.19"
+    },
+    "extra": {
+        "wordpress-install-dir": "tests/wordpress",
+        "strauss": {
+            "target_directory": "includes/vendor-prefixed",
+            "namespace_prefix": "Justbee\\PostCaster\\Vendor\\",
+            "classmap_prefix": "Justbee_PostCaster_",
+            "constant_prefix": "JUSTBEE_POSTCASTER_VENDOR_",
+            "packages": [
+                "woocommerce/action-scheduler"
+            ],
+            "override_autoload": {
+                "woocommerce/action-scheduler": {
+                    "files": [
+                        "action-scheduler.php",
+                        "functions.php",
+                        "lib/WP_Async_Request.php"
+                    ],
+                    "classmap": [
+                        "classes/",
+                        "deprecated/",
+                        "lib/cron-expression/"
+                    ]
+                }
+            }
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/phpunit/includes/"
+        ]
+    },
+    "scripts": {
+        "build:action-scheduler": [
+            "@php bin/sync-action-scheduler.php",
+            "@php bin/run-strauss.php",
+            "@php bin/patch-prefixed-action-scheduler.php",
+            "@php bin/rename-prefixed-classmap-files.php"
+        ],
+        "build:release": "@php bin/build-release.php",
+        "test:lint": "php bin/lint.php",
+        "test:phpunit": "phpunit",
+        "test:ajax": "phpunit --group ajax",
+        "test": [
+            "@test:lint",
+            "@test:phpunit"
+        ],
+        "test:all": [
+            "@test:lint",
+            "@test:phpunit",
+            "@test:ajax"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "roots/wordpress-core-installer": true
+        }
+    }
+}
