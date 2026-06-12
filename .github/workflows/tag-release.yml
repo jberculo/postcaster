@@ -23,7 +23,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          version="$(awk -F': ' '/^[[:space:]]*Version:/ { print $2; exit }' postcaster.php)"
+          version="$(awk -F': ' '/^[[:space:]\/\*#@]*Version:/ { print $2; exit }' postcaster.php)"
           stable_tag="$(awk -F': ' '/^Stable tag:/ { print $2; exit }' readme.txt)"
 
           if [[ -z "$version" ]]; then

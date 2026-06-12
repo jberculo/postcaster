@@ -43,7 +43,7 @@ jobs:
           plugin_file="${PLUGIN_DIR}/${PLUGIN_SLUG}.php"
           readme_file="${PLUGIN_DIR}/readme.txt"
 
-          plugin_version="$(awk -F': ' '/^[[:space:]]*\* Version:/ { print $2; exit }' "$plugin_file")"
+          plugin_version="$(awk -F': ' '/^[[:space:]\/\*#@]*Version:/ { print $2; exit }' "$plugin_file")"
           readme_version="$(awk -F': ' '/^Stable tag:/ { print $2; exit }' "$readme_file")"
 
           if [[ -z "$plugin_version" ]]; then
