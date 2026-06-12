@@ -4,7 +4,7 @@ Tags: social, bluesky, mastodon
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 0.4.5
+Stable tag: 0.4.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,13 +121,17 @@ If you do not manage the server yourself, ask the server administrator or hostin
 
 = Where do I find technical integration details? =
 
-See the repository docs:
+See the docs in the GitHub repository:
+https://github.com/jberculo/postcaster/tree/master/docs
 
 * `docs/templates.md` for placeholders, precedence, and template examples
 * `docs/integration.md` for hooks, theme integration, and implementation examples
 * `docs/troubleshooting.md` for FAQ-style help with credentials, cron, previews, and publishing
 
 == Changelog ==
+
+= 0.4.6 =
+* Fixed the release packaging so WordPress.org SVN receives only the intended plugin distribution files, without repo-only release notes or WordPress.org source asset folders.
 
 = 0.4.5 =
 * Reworked the Action Scheduler hook migration query to use WordPress database helpers instead of an interpolated SQL update.

@@ -4,7 +4,7 @@
  * Plugin Name: PostCaster
  * Plugin URI: https://justbee.nl/
  * Description: PostCaster publishes WordPress posts with featured images to Bluesky and Mastodon.
- * Version: 0.4.5
+ * Version: 0.4.6
  * Author: Justbee
  * License: GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
