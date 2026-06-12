@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Resolve release target
         id: target
@@ -136,7 +137,7 @@ jobs:
           ./bin/deploy-wporg.sh "${PLUGIN_SLUG}" "${version}" "${zip_path}" "${WPORG_USERNAME}" "${WPORG_PASSWORD}"
 
       - name: Create GitHub release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ steps.target.outputs.tag }}
           generate_release_notes: true
