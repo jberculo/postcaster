@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
+$options = getopt('', ['source-root:']);
+
 $root = dirname(__DIR__);
+$sourceRoot = isset($options['source-root']) && is_string($options['source-root']) && $options['source-root'] !== ''
+    ? $options['source-root']
+    : $root;
 $slug = 'postcaster';
 $outputDir = $root . DIRECTORY_SEPARATOR . 'dist';
 $buildDir = $outputDir . DIRECTORY_SEPARATOR . '_build';
 $stagingDir = $buildDir . DIRECTORY_SEPARATOR . $slug;
-$pluginFile = $root . DIRECTORY_SEPARATOR . $slug . '.php';
-$readmeFile = $root . DIRECTORY_SEPARATOR . 'readme.txt';
-$distIgnoreFile = $root . DIRECTORY_SEPARATOR . '.distignore';
+$pluginFile = $sourceRoot . DIRECTORY_SEPARATOR . $slug . '.php';
+$readmeFile = $sourceRoot . DIRECTORY_SEPARATOR . 'readme.txt';
+$distIgnoreFile = $sourceRoot . DIRECTORY_SEPARATOR . '.distignore';
 
 if (!is_file($pluginFile)) {
     fwrite(STDERR, "Missing plugin file: {$pluginFile}\n");
@@ -53,7 +58,7 @@ deletePath($buildDir);
 mkdirOrFail($stagingDir);
 
 $excludedPaths = loadExcludedPaths($distIgnoreFile);
-copyDistributionFiles($root, $stagingDir, $excludedPaths);
+copyDistributionFiles($sourceRoot, $stagingDir, $excludedPaths);
 createArchive($stagingDir, $archivePath, $buildDir);
 deletePath($buildDir);
 

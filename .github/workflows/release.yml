@@ -50,11 +50,15 @@ jobs:
             exit 1
           fi
 
-          git checkout --force "$tag"
+          source_dir="${RUNNER_TEMP}/release-source"
+          rm -rf "$source_dir"
+          mkdir -p "$source_dir"
+          git archive "$tag" | tar -x -C "$source_dir"
 
           echo "tag=${tag}" >> "$GITHUB_OUTPUT"
           echo "version=${version}" >> "$GITHUB_OUTPUT"
           echo "sha=${sha}" >> "$GITHUB_OUTPUT"
+          echo "source_dir=${source_dir}" >> "$GITHUB_OUTPUT"
 
       - name: Verify tag commit is on master
         shell: bash
@@ -73,8 +77,8 @@ jobs:
           set -euo pipefail
 
           tag_version="${{ steps.target.outputs.version }}"
-          plugin_file="${PLUGIN_DIR}/${PLUGIN_SLUG}.php"
-          readme_file="${PLUGIN_DIR}/readme.txt"
+          plugin_file="${{ steps.target.outputs.source_dir }}/${PLUGIN_SLUG}.php"
+          readme_file="${{ steps.target.outputs.source_dir }}/readme.txt"
 
           plugin_version="$(awk -F': ' '/^[[:space:]\/\*#@]*Version:/ { print $2; exit }' "$plugin_file")"
           readme_version="$(awk -F': ' '/^Stable tag:/ { print $2; exit }' "$readme_file")"
@@ -102,7 +106,7 @@ jobs:
       - name: Build plugin zip
         shell: bash
         run: |
-          php bin/build-release.php
+          php bin/build-release.php --source-root="${{ steps.target.outputs.source_dir }}"
 
       - name: Install SVN tooling
         shell: bash
