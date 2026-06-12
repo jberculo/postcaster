@@ -73,14 +73,14 @@ svn add --force "$TRUNK_DIR" "$TAG_DIR" "$ASSETS_TARGET_DIR" >/dev/null
 while IFS= read -r missing_path; do
     [[ -n "$missing_path" ]] || continue
     svn rm --force "$missing_path" >/dev/null
-done < <(svn status | awk '/^!/ {print substr($0, 9)}')
+done < <(svn status "$SVN_DIR" | awk '/^!/ {print substr($0, 9)}')
 
 while IFS= read -r png_path; do
     [[ -n "$png_path" ]] || continue
     svn propset svn:mime-type image/png "$png_path" >/dev/null
 done < <(find "$ASSETS_TARGET_DIR" -maxdepth 1 -type f -name '*.png' | sort)
 
-if [[ -z "$(svn status)" ]]; then
+if [[ -z "$(svn status "$SVN_DIR")" ]]; then
     echo "WordPress.org SVN is already up to date for ${VERSION}."
     exit 0
 fi
