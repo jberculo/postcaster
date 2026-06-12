@@ -12,7 +12,7 @@
         "wp-phpunit/wp-phpunit": "^6.9",
         "yoast/phpunit-polyfills": "^2.0",
         "roots/wordpress-no-content": "^7.0",
-        "brianhenryie/strauss": "0.19"
+        "brianhenryie/strauss": "0.27.3"
     },
     "extra": {
         "wordpress-install-dir": "tests/wordpress",
