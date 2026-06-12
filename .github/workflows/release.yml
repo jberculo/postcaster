@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -23,14 +24,45 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Resolve release target
+        id: target
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
+            tag="$(git tag --list 'v*' --sort=-version:refname | head -n1)"
+          else
+            tag="${GITHUB_REF_NAME}"
+          fi
+
+          if [[ -z "$tag" ]]; then
+            echo "No release tag matching v* was found."
+            exit 1
+          fi
+
+          version="${tag#v}"
+          sha="$(git rev-list -n1 "$tag")"
+
+          if [[ -z "$sha" ]]; then
+            echo "Could not resolve commit for tag ${tag}."
+            exit 1
+          fi
+
+          git checkout --force "$tag"
+
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+          echo "sha=${sha}" >> "$GITHUB_OUTPUT"
+
       - name: Verify tag commit is on master
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin master --depth=1
 
-          if ! git branch -r --contains "$GITHUB_SHA" | grep -Eq 'origin/master$'; then
-            echo "Tag ${GITHUB_REF_NAME} does not point to a commit on master."
+          if ! git branch -r --contains "${{ steps.target.outputs.sha }}" | grep -Eq 'origin/master$'; then
+            echo "Tag ${{ steps.target.outputs.tag }} does not point to a commit on master."
             exit 1
           fi
 
@@ -39,7 +71,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          tag_version="${GITHUB_REF_NAME#v}"
+          tag_version="${{ steps.target.outputs.version }}"
           plugin_file="${PLUGIN_DIR}/${PLUGIN_SLUG}.php"
           readme_file="${PLUGIN_DIR}/readme.txt"
 
@@ -97,8 +129,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          version="${GITHUB_REF_NAME#v}"
-          zip_path="./dist/${PLUGIN_SLUG}-${GITHUB_REF_NAME}.zip"
+          version="${{ steps.target.outputs.version }}"
+          zip_path="./dist/${PLUGIN_SLUG}-${{ steps.target.outputs.tag }}.zip"
 
           chmod +x bin/deploy-wporg.sh
           ./bin/deploy-wporg.sh "${PLUGIN_SLUG}" "${version}" "${zip_path}" "${WPORG_USERNAME}" "${WPORG_PASSWORD}"
@@ -106,5 +138,6 @@ jobs:
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.target.outputs.tag }}
           generate_release_notes: true
-          files: ./dist/${{ env.PLUGIN_SLUG }}-${{ github.ref_name }}.zip
+          files: ./dist/${{ env.PLUGIN_SLUG }}-${{ steps.target.outputs.tag }}.zip

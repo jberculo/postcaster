@@ -1,6 +1,6 @@
 # Releasing PostCaster
 
-This repository is set up so a release starts from a normal push to `master`.
+This repository is set up so release preparation starts from a normal push to `master`.
 
 ## One-time setup
 
@@ -28,8 +28,12 @@ A release is created when:
 If the version is new, GitHub Actions will:
 
 1. create and push tag `v<version>`
-2. build the plugin zip from the current repository state
-3. create a GitHub release for that tag
+
+After that, run the `Release Plugin` workflow manually from the GitHub Actions tab. In manual mode it will:
+
+1. pick the latest `v*` tag automatically
+2. build the plugin zip from that tagged state
+3. create or update the GitHub release for that tag
 4. deploy the same build to WordPress.org SVN:
    `trunk/`
    `tags/<version>/`
@@ -51,10 +55,16 @@ After the push to `master`:
 
 1. `Tag Release On Master` runs
 2. it creates `v<version>` if that tag does not already exist
-3. the tag triggers `Release Plugin`
-4. that workflow builds `dist/postcaster-v<version>.zip`
-5. it creates the GitHub release
-6. it commits the release to the WordPress.org SVN plugin repo
+3. open GitHub Actions and run `Release Plugin`
+4. that workflow selects the latest `v*` tag
+5. it builds `dist/postcaster-v<version>.zip`
+6. it creates or updates the GitHub release
+7. it commits the release to the WordPress.org SVN plugin repo
+
+Manual fallback:
+
+- `Release Plugin` is currently intended to be started manually from the GitHub Actions tab.
+- In manual mode, the workflow automatically picks the latest `v*` tag, checks out that tag, builds the zip from that tagged state, and deploys it to WordPress.org SVN.
 
 ## Notes
 
