@@ -102,6 +102,37 @@ final class PostMetaModelTest extends WP_UnitTestCase
         );
     }
 
+    public function test_saving_a_result_never_flushes_a_cache_group(): void
+    {
+        global $wp_object_cache;
+
+        $original = $wp_object_cache;
+        $spy = new class () extends WP_Object_Cache {
+            public array $flushedGroups = [];
+
+            public function flush_group($group)
+            {
+                $this->flushedGroups[] = $group;
+
+                return parent::flush_group($group);
+            }
+        };
+        $wp_object_cache = $spy;
+
+        try {
+            $this->meta->saveError($this->postId, 'mastodon', 'global', 'boom');
+            $this->meta->saveSuccess($this->postId, 'mastodon', 'global', ['id' => 'a', 'url' => 'b']);
+        } finally {
+            $wp_object_cache = $original;
+        }
+
+        $this->assertSame(
+            [],
+            $spy->flushedGroups,
+            'A group flush scans the whole keyspace on a persistent object cache and blocks Redis.'
+        );
+    }
+
     public function test_save_post_template_deletes_when_matches_default(): void
     {
         $this->meta->savePostTemplate($this->postId, 'custom', 'default', 'global');
