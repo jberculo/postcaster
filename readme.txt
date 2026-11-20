@@ -4,7 +4,7 @@ Tags: social, bluesky, mastodon
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 0.4.6
+Stable tag: 0.4.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -129,6 +129,9 @@ https://github.com/jberculo/postcaster/tree/master/docs
 * `docs/troubleshooting.md` for FAQ-style help with credentials, cron, previews, and publishing
 
 == Changelog ==
+
+= 0.4.7 =
+* Fixed a site-wide stall on sites with a Redis object cache: after every publish, PostCaster flushed its cache group, which made Redis scan every key and block other requests for seconds. The cache is now invalidated with a last-changed key.
 
 = 0.4.6 =
 * Fixed the release packaging so WordPress.org SVN receives only the intended plugin distribution files, without repo-only release notes or WordPress.org source asset folders.

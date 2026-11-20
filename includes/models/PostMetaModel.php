@@ -44,9 +44,7 @@ final class PostMetaModel
 
     private function invalidatePostsWithErrorsCache(): void
     {
-        if (function_exists('wp_cache_flush_group')) {
-            wp_cache_flush_group(self::POSTS_WITH_ERRORS_CACHE_GROUP);
-        }
+        wp_cache_set_last_changed(self::POSTS_WITH_ERRORS_CACHE_GROUP);
     }
 
     /**
@@ -60,7 +58,8 @@ final class PostMetaModel
         global $wpdb;
 
         $limit = max(1, $limit);
-        $cacheKey = 'posts_with_errors_' . $limit;
+        $cacheKey = 'posts_with_errors_' . $limit . ':'
+            . wp_cache_get_last_changed(self::POSTS_WITH_ERRORS_CACHE_GROUP);
         $cachedRows = wp_cache_get($cacheKey, self::POSTS_WITH_ERRORS_CACHE_GROUP);
         if (is_array($cachedRows)) {
             return array_map('intval', $cachedRows);
